@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サービス | MOWEN, Inc – AI Web制作・業務効率化・採用強化</title>
+  <meta name="description" content="MOWEN, Incのサービス詳細。AI活用Web制作（最短2週間・低コスト）、生成AI×業務効率化コンサル、採用強化Webマーケティング（応募率・ミスマッチ改善）、バックオフィスDXの4軸で中小企業を支援します。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="サービス | MOWEN, Inc">
+  <meta property="og:description" content="Web制作・マーケティング・AI×DXで中小企業の成長を伴走支援。">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:    #030812;
+      --bg2:   #060f1e;
+      --card:  rgba(5,18,40,0.85);
+      --blue:  #00c8ff;
+      --blue2: #0066dd;
+      --purple:#7b21ff;
+      --text:  #d4eeff;
+      --muted: #627f9a;
+      --border:rgba(0,200,255,0.18);
+      --glow:  0 0 30px rgba(0,200,255,0.45);
+      --glow-sm:0 0 14px rgba(0,200,255,0.3);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.75;
+    }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--blue2); border-radius: 3px; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      background: rgba(3,8,18,0.95);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: var(--blue);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-shadow: var(--glow-sm);
+    }
+    .nav-logo span { color: #fff; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a.active { color: var(--blue); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0; right: 0;
+      height: 1px;
+      background: var(--blue);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta {
+      padding: 0.45rem 1.4rem !important;
+      border: 1px solid var(--blue) !important;
+      border-radius: 4px;
+      color: var(--blue) !important;
+      font-size: 0.83rem !important;
+      font-weight: 700 !important;
+    }
+    .nav-cta:hover {
+      background: var(--blue) !important;
+      color: var(--bg) !important;
+      box-shadow: var(--glow-sm) !important;
+    }
+    .nav-cta::after { display: none !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--blue);
+      border-radius: 2px;
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 10rem 0 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 80%, rgba(0,102,221,0.12) 0%, transparent 65%);
+    }
+    .page-header::after {
+      content: 'SERVICES';
+      position: absolute;
+      bottom: -20px; left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Orbitron', monospace;
+      font-size: clamp(4rem, 12vw, 10rem);
+      font-weight: 900;
+      color: rgba(0,200,255,0.04);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .page-label {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .page-title {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    .page-title .accent { color: var(--blue); }
+
+    .page-desc {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* SECTION */
+    section { padding: 6rem 0; }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .sec-label {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .sec-title {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+    }
+    .sec-title .accent { color: var(--blue); }
+
+    .line-deco {
+      width: 50px; height: 2px;
+      background: linear-gradient(90deg, var(--blue), transparent);
+      margin: 1.2rem 0;
+    }
+
+    /* SERVICE SECTION */
+    .service-block {
+      padding: 6rem 0;
+      position: relative;
+    }
+    .service-block:nth-child(even) { background: var(--bg2); }
+    .service-block::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    .service-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .service-layout.reverse { direction: rtl; }
+    .service-layout.reverse > * { direction: ltr; }
+
+    .service-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .service-num {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      color: var(--blue);
+      margin-bottom: 0.6rem;
+    }
+
+    .service-big-icon {
+      width: 72px; height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(0,200,255,0.3);
+      border-radius: 16px;
+      background: rgba(0,200,255,0.06);
+      margin-bottom: 1.4rem;
+    }
+    .service-big-icon svg {
+      width: 36px; height: 36px;
+      color: var(--blue);
+      stroke: currentColor;
+      filter: drop-shadow(0 0 8px rgba(0,200,255,0.5));
+    }
+
+    .service-name {
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .service-tagline {
+      color: var(--blue);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.85;
+      margin-bottom: 2rem;
+    }
+
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .service-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      font-size: 0.9rem;
+    }
+    .service-list li::before {
+      content: '▸';
+      color: var(--blue);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Detail cards */
+    .detail-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .detail-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+    }
+    .detail-card:hover {
+      border-color: rgba(0,200,255,0.4);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4), var(--glow-sm);
+      transform: translateY(-3px);
+    }
+
+    .detail-card-icon {
+      width: 40px; height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(0,200,255,0.2);
+      border-radius: 8px;
+      background: rgba(0,200,255,0.05);
+      margin-bottom: 0.9rem;
+    }
+    .detail-card-icon svg {
+      width: 20px; height: 20px;
+      color: var(--blue);
+      stroke: currentColor;
+    }
+    .detail-card:hover .detail-card-icon svg {
+      filter: drop-shadow(0 0 5px var(--blue));
+    }
+    .detail-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .detail-card p  { color: var(--muted); font-size: 0.82rem; line-height: 1.7; }
+
+    /* Price */
+    .price-block {
+      background: rgba(0,200,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .price-label { font-size: 0.8rem; color: var(--muted); }
+    .price-range {
+      font-family: 'Orbitron', monospace;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--blue);
+    }
+
+    /* FAQ */
+    #faq { background: var(--bg2); }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .faq-q {
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      user-select: none;
+    }
+    .faq-q:hover { color: var(--blue); }
+
+    .faq-icon {
+      width: 20px; height: 20px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: var(--blue);
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      padding: 0 1.5rem;
+    }
+    .faq-item.open .faq-a {
+      max-height: 300px;
+      padding: 0 1.5rem 1.2rem;
+    }
+    .faq-a p { color: var(--muted); font-size: 0.9rem; line-height: 1.8; }
+
+    /* CTA */
+    #cta-bar {
+      text-align: center;
+      padding: 6rem 0;
+    }
+    .cta-inner {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-inner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), var(--purple), transparent);
+    }
+    .cta-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; margin-bottom: 1rem; }
+    .cta-title .accent { color: var(--blue); }
+    .cta-desc { color: var(--muted); max-width: 460px; margin: 0 auto 2.5rem; font-size: 0.95rem; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.9rem 2.4rem;
+      background: linear-gradient(130deg, var(--blue2), var(--blue));
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 20px rgba(0,102,221,0.5);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,200,255,0.5); }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 0.9rem 2.4rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
+
+    /* FOOTER */
+    footer {
+      background: #020710;
+      border-top: 1px solid var(--border);
+      padding: 3rem 0 1.5rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-logo {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--blue);
+      text-shadow: var(--glow-sm);
+      margin-bottom: 0.7rem;
+    }
+    .footer-brand p { color: var(--muted); font-size: 0.82rem; line-height: 1.8; }
+    .footer-col h5 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 1rem;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.5rem; }
+    .footer-col a { color: var(--muted); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--blue); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .footer-bottom p, .footer-bottom a { color: var(--muted); font-size: 0.78rem; text-decoration: none; }
+    .footer-bottom a:hover { color: var(--blue); }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 68px; left: 0; right: 0;
+        background: rgba(3,8,18,0.98);
+        padding: 1.5rem 2rem;
+        gap: 1.2rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .service-layout,
+      .service-layout.reverse { grid-template-columns: 1fr; direction: ltr; }
+      .detail-cards { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">MOW<span>EN</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="services.html" class="active">サービス</a></li>
+    <li><a href="works.html">実績</a></li>
+    <li><a href="about.html">会社概要</a></li>
+    <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <p class="page-label">// Services</p>
+  <h1 class="page-title">AIで加速する、<br><span class="accent">4つの支援領域</span></h1>
+  <p class="page-desc">生成AIを核に、Web制作・業務効率化・採用強化・バックオフィスDXをワンストップで提供。早く・安く・確実に成果を出します。</p>
+</div>
+
+<!-- SERVICE 01: AI WEB -->
+<div class="service-block" id="web">
+  <div class="container">
+    <div class="service-layout">
+      <div class="service-meta reveal">
+        <div class="service-num">// SERVICE 01</div>
+        <div class="service-big-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <h2 class="service-name">AI活用 Web制作・開発</h2>
+        <p class="service-tagline">— 従来比30〜50%コスト削減、最短2週間納品を実現</p>
+        <p class="service-desc">
+          生成AIをデザイン・コーディング・コンテンツ制作のすべてに活用することで、
+          大手制作会社と同等の品質を、中小企業が払える価格・スピードで提供します。
+          制作費を抑えた分を広告・採用・マーケティング投資に回せるのが、MOWENを選ぶ最大のメリットです。
+        </p>
+        <ul class="service-list">
+          <li>コーポレートサイト・ブランドサイト</li>
+          <li>ランディングページ（LP）制作</li>
+          <li>ECサイト構築・リニューアル</li>
+          <li>WordPress / Headless CMS 導入</li>
+          <li>既存サイトの高速化・UX改善</li>
+          <li>SEO基盤を組み込んだ設計</li>
+        </ul>
+        <div class="price-block">
+          <div><div class="price-label">コーポレートサイト（AI活用）</div></div>
+          <div class="price-range">¥150,000〜</div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="detail-cards">
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7H3a7 7 0 0 1 7-7h1V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2z"/>
+                <path d="M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/>
+                <circle cx="9" cy="17" r="1"/><circle cx="15" cy="17" r="1"/>
+              </svg>
+            </div>
+            <h4>AI駆動の制作プロセス</h4>
+            <p>デザイン案・コーディング・コピーライティングにAIをフル活用。工数を大幅削減しながら高品質を維持します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h4>最短2週間納品</h4>
+            <p>AI活用により制作スピードが劇的に向上。急ぎのサイトリニューアルにも柔軟に対応します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h4>従来比30〜50%コスト削減</h4>
+            <p>大手に頼むと100万円超の案件も、AI活用で半額以下に。削減分を集客・採用投資へ回せます。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </div>
+            <h4>SEO基盤を最初から設計</h4>
+            <p>公開後すぐ検索エンジンに評価される構造化・メタタグ・表示速度を制作段階から組み込みます。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+            </div>
+            <h4>モバイルファースト設計</h4>
+            <p>スマートフォンからの流入を確実に獲得。全デバイスで最適なUXを提供します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h4>保守・改善サポート</h4>
+            <p>公開後もデータを見ながら継続的に改善提案。"作って終わり"にしません。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 02: AI EFFICIENCY -->
+<div class="service-block" id="ai">
+  <div class="container">
+    <div class="service-layout reverse">
+      <div class="service-meta reveal">
+        <div class="service-num">// SERVICE 02</div>
+        <div class="service-big-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/>
+            <line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/>
+            <line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/>
+            <line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/>
+            <line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>
+          </svg>
+        </div>
+        <h2 class="service-name">生成AI × 業務効率化コンサル</h2>
+        <p class="service-tagline">— 「何から始めればいい？」の段階から伴走支援</p>
+        <p class="service-desc">
+          ChatGPT・Claude・画像生成AIなど最新ツールの活用から、反復業務の自動化まで、
+          中小企業のリソース・予算に合わせた現実的な導入を支援します。
+          ツールを入れて終わりではなく、現場に定着し成果が出るまで月額の伴走プランで継続支援。
+          人手不足・コスト高騰に悩む経営者に、AIという即効性のある解決策を届けます。
+        </p>
+        <ul class="service-list">
+          <li>生成AI活用ロードマップの策定</li>
+          <li>ChatGPT・Claude等の業務活用研修</li>
+          <li>見積・メール・資料作成の半自動化</li>
+          <li>Zapier・Make・Notionによる業務フロー自動化</li>
+          <li>AIチャットボット導入・カスタマイズ</li>
+          <li>月額伴走プラン（定着・改善まで継続支援）</li>
+        </ul>
+        <div class="price-block">
+          <div><div class="price-label">AI導入コンサル（スポット）</div></div>
+          <div class="price-range">¥100,000〜</div>
+        </div>
+        <div class="price-block" style="margin-top:0.6rem;">
+          <div><div class="price-label">月額伴走プラン</div></div>
+          <div class="price-range">¥30,000〜 / 月</div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="detail-cards">
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+                <line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/>
+              </svg>
+            </div>
+            <h4>AI活用ロードマップ</h4>
+            <p>現状業務を整理し、AIで効果が出やすい領域から優先着手できる計画を策定します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <h4>実践的AIリテラシー研修</h4>
+            <p>ChatGPT・Claude等の実践的な使い方を研修。社員が自走できるようになるまで支援します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </div>
+            <h4>業務フロー自動化</h4>
+            <p>Zapier・Make・Notionを活用し、反復作業・定型メール・データ集計を自動化します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <h4>AIチャットボット導入</h4>
+            <p>問い合わせ・FAQ・社内ナレッジ検索をAI化。24時間対応と担当者負担軽減を同時に実現します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+              </svg>
+            </div>
+            <h4>データ可視化・分析</h4>
+            <p>売上・顧客・在庫データをAIで可視化。経営判断に使えるダッシュボードを構築します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 4 23 10 17 10"/>
+                <polyline points="1 20 1 14 7 14"/>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+              </svg>
+            </div>
+            <h4>月額伴走・改善サポート</h4>
+            <p>導入後の定着・活用度向上・追加改善を月額プランで継続支援。成果が出るまで伴走します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 03: RECRUIT -->
+<div class="service-block" id="recruit">
+  <div class="container">
+    <div class="service-layout">
+      <div class="service-meta reveal">
+        <div class="service-num">// SERVICE 03</div>
+        <div class="service-big-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h2 class="service-name">採用強化 Webマーケティング</h2>
+        <p class="service-tagline">— 応募率・面談率の改善と採用ミスマッチの解消</p>
+        <p class="service-desc">
+          採用サイトを作るだけでは人は来ません。MOWENは採用ページの制作にとどまらず、
+          <strong>「欲しい人材が応募したくなる仕組み」</strong>をデータ分析で構築します。
+          求人原稿の見直し・ターゲット設定・応募後フローの最適化まで踏み込み、
+          面談率・内定承諾率の向上と採用ミスマッチの解消を同時に実現します。
+          人手不足が深刻な中小企業こそ、採用をWebマーケティングとして捉え直す必要があります。
+        </p>
+        <ul class="service-list">
+          <li>採用専用LP・採用サイト制作</li>
+          <li>求人原稿のコピーライティング改善</li>
+          <li>Indeed・求人ボックス・Wantedly等の媒体最適化</li>
+          <li>応募率・面談率・内定承諾率のデータ分析</li>
+          <li>採用ターゲット（ペルソナ）の明確化</li>
+          <li>採用ミスマッチ解消のための情報設計</li>
+        </ul>
+        <div class="price-block">
+          <div><div class="price-label">採用LP制作＋初期分析</div></div>
+          <div class="price-range">¥200,000〜</div>
+        </div>
+        <div class="price-block" style="margin-top:0.6rem;">
+          <div><div class="price-label">採用改善・分析サポート（月額）</div></div>
+          <div class="price-range">¥40,000〜 / 月</div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="detail-cards">
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h4>採用サイト・LP制作</h4>
+            <p>企業の魅力・文化・働く環境を訴求する採用専用サイトをAI活用で低コスト・高品質に制作します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+              </svg>
+            </div>
+            <h4>求人原稿の最適化</h4>
+            <p>「刺さる求人原稿」に改善。ターゲット人材が反応するキーワード・訴求軸をデータで特定します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+            </div>
+            <h4>応募率・面談率の分析</h4>
+            <p>GA4・各媒体データを統合分析。どこで離脱しているかを可視化し、ボトルネックを特定します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <h4>採用ターゲット設計</h4>
+            <p>「どんな人に来てほしいか」を言語化。ペルソナ設計をもとに求人・サイト・原稿を一貫設計します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/>
+                <path d="M6 21V9a9 9 0 0 0 9 9"/>
+              </svg>
+            </div>
+            <h4>ミスマッチ解消の情報設計</h4>
+            <p>入社後ギャップをなくすための情報開示設計。「来てほしい人だけが応募する」仕組みを構築します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                <polyline points="16 7 22 7 22 13"/>
+              </svg>
+            </div>
+            <h4>媒体・広告の最適化</h4>
+            <p>Indeed・Wantedly・求人ボックス等の媒体選定と出稿最適化。限られた採用予算で最大効果を出します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 04: BACKOFFICE DX -->
+<div class="service-block" id="backoffice">
+  <div class="container">
+    <div class="service-layout reverse">
+      <div class="service-meta reveal">
+        <div class="service-num">// SUPPLEMENTAL SERVICE</div>
+        <div class="service-big-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </div>
+        <h2 class="service-name">バックオフィスDX</h2>
+        <p class="service-tagline">— インボイス・電子帳簿対応から会計自動化まで</p>
+        <p class="service-desc">
+          インボイス制度・電子帳簿保存法への対応が取引要件となりつつある今、
+          バックオフィスのデジタル化は避けて通れません。
+          既存の支援クライアントを中心に、請求書電子化・会計ソフト導入・業務フロー整備を支援します。
+          Webやマーケティングと連動した全体最適の視点で、バックオフィスも効率化します。
+        </p>
+        <ul class="service-list">
+          <li>インボイス制度・電子帳簿保存法の対応支援</li>
+          <li>クラウド会計ソフト導入（freee・マネーフォワード等）</li>
+          <li>請求書・見積書の電子化・自動化</li>
+          <li>勤怠管理・労務管理ツールの導入</li>
+          <li>各種SaaS連携・業務フロー整備</li>
+        </ul>
+        <div class="price-block">
+          <div><div class="price-label">導入支援（スポット）</div></div>
+          <div class="price-range">¥50,000〜</div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="detail-cards">
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <h4>インボイス・電子帳簿対応</h4>
+            <p>法令対応に必要なシステム・フロー整備を支援。罰則リスクを回避しながらペーパーレス化します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+            </div>
+            <h4>クラウド会計導入</h4>
+            <p>freee・マネーフォワードの導入・設定・運用フローの構築をハンズオンで支援します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </div>
+            <h4>請求・見積の自動化</h4>
+            <p>請求書・見積書の発行・送付・管理を自動化。手作業によるミスと工数を削減します。</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+              </svg>
+            </div>
+            <h4>SaaS連携・統合</h4>
+            <p>会計・勤怠・CRM・ECなど既存ツールをAPI連携。情報の分散をなくし経営判断を迅速化します。</p>
+          </div>
+        </div>
+        <div style="margin-top:1.2rem; padding:1rem 1.2rem; background:rgba(0,200,255,0.04); border:1px solid var(--border); border-radius:8px; font-size:0.83rem; color:var(--muted);">
+          ※ バックオフィスDXは、Web制作・AI活用・採用強化のいずれかのサービスをご利用中のクライアントへの追加提供を基本としています。単体でのご依頼もお気軽にご相談ください。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <p class="sec-label">// FAQ</p>
+      <h2 class="sec-title">よくある<span class="accent">ご質問</span></h2>
+      <div class="line-deco" style="margin:1.2rem auto;"></div>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>AIを使うと品質は下がりませんか？</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p>むしろ向上するケースがほとんどです。AIはデザイン案の量産・コーディング補助・コピー案出しに使い、最終的な判断・品質チェック・戦略設計は人間が行います。AIは「品質を落とさずスピードとコストを改善する」ための道具です。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Web制作の最短納期2週間は、どんなサイトが対象ですか？</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p>LP（ランディングページ）や採用ページなどシンプルな構成のサイトが対象です。コーポレートサイト全体だと4〜6週間が目安です。ご要望のボリュームをお知らせいただければ、より正確な納期をお伝えします。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>採用サービスは、どのくらいで効果が出ますか？</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p>採用ページ公開後、1〜2ヶ月でデータが蓄積し始め、3ヶ月目以降に改善効果が数字に表れるケースが多いです。応募率・面談率の変化をデータで追いながら継続的に最適化するため、単発ではなく月額プランでの継続支援を推奨しています。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>採用ミスマッチをどうやって解消するのですか？</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p>「来てほしい人にだけ刺さる情報」と「合わない人が自然と離脱する情報」の両方を意図的に設計します。具体的には、職場のリアルな様子・ネガティブな側面も含めた正直な情報開示・入社後の1日の流れなどを構造的に組み込みます。入社後ギャップを事前に潰すことがミスマッチ解消の本質です。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>AI導入コンサルは、ITに詳しくなくても大丈夫ですか？</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p>「AIって何から始めればいいの？」という段階が一番多いご相談です。技術的な説明は不要で、「この作業を楽にしたい」という課題から始めます。実際に現場の方と一緒に使いながら覚えていただくハンズオン型の支援なので、ITが苦手な方でも定着しやすいのが特徴です。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>複数サービスをまとめて依頼するとどうなりますか？</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p>Web制作・AI業務効率化・採用強化をまとめてご依頼いただくと、戦略の一貫性が保たれ効果が最大化されます。また、複数サービス契約の場合はまとめてご相談の上、費用面の最適化も行います。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-bar">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <p class="sec-label" style="text-align:center;">// Get Started</p>
+      <h2 class="cta-title">まずは<span class="accent">無料相談</span>から</h2>
+      <p class="cta-desc">サービスの詳細や料金についてのご質問も、お気軽にお問い合わせください。</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-primary">無料相談を予約する</a>
+        <a href="about.html" class="btn-outline">会社概要を見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">MOWEN, Inc</div>
+        <p>株式会社メーヴェ<br>中小企業・ローカルビジネス専門の<br>Webコンサルティングカンパニー</p>
+      </div>
+      <div class="footer-col">
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="#web">AI活用 Web制作・開発</a></li>
+          <li><a href="#ai">生成AI×業務効率化</a></li>
+          <li><a href="#recruit">採用強化Web</a></li>
+          <li><a href="#backoffice">バックオフィスDX</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>会社情報</h5>
+        <ul>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="about.html#mission">ミッション</a></li>
+          <li><a href="about.html#values">バリュー</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>お問い合わせ</h5>
+        <ul>
+          <li><a href="contact.html">無料相談を予約</a></li>
+          <li><a href="contact.html#faq">よくある質問</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 MOWEN, Inc（株式会社メーヴェ）All rights reserved.</p>
+      <div style="display:flex; gap:1.5rem;">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

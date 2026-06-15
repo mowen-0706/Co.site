@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOWEN, Inc | 中小企業・ローカルビジネス専門Webコンサルティング</title>
+  <meta name="description" content="MOWEN, Inc（株式会社メーヴェ）は、Web制作・開発・デジタルマーケティング・AI×DXで中小企業・ローカルビジネスの成長を支援するWebコンサルティング会社です。">
+  <meta name="keywords" content="Webコンサルティング, Web制作, AI DX, DX推進, 中小企業, ローカルビジネス, SEO対策, ホームページ制作">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="MOWEN, Inc | 中小企業専門Webコンサルティング">
+  <meta property="og:description" content="Web制作・マーケティング・AI×DXで中小企業のデジタル変革を伴走支援。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "MOWEN, Inc",
+    "alternateName": "株式会社メーヴェ",
+    "description": "中小企業・ローカルビジネス専門のWebコンサルティング会社。Web制作・開発・デジタルマーケティング・AI×DX支援。",
+    "url": "https://mowen.inc",
+    "areaServed": "JP",
+    "serviceType": ["Webコンサルティング", "Web制作", "デジタルマーケティング", "AI DXコンサルティング"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #030812;
+      --bg2:     #060f1e;
+      --card:    rgba(5, 18, 40, 0.85);
+      --blue:    #00c8ff;
+      --blue2:   #0066dd;
+      --purple:  #7b21ff;
+      --text:    #d4eeff;
+      --muted:   #627f9a;
+      --border:  rgba(0, 200, 255, 0.18);
+      --glow:    0 0 30px rgba(0, 200, 255, 0.45);
+      --glow-sm: 0 0 14px rgba(0, 200, 255, 0.3);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.75;
+    }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--blue2); border-radius: 3px; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      background: rgba(3, 8, 18, 0.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+
+    .nav-logo {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: var(--blue);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-shadow: var(--glow-sm);
+    }
+    .nav-logo span { color: #fff; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0; right: 0;
+      height: 1px;
+      background: var(--blue);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    .nav-cta {
+      padding: 0.45rem 1.4rem !important;
+      border: 1px solid var(--blue) !important;
+      border-radius: 4px;
+      color: var(--blue) !important;
+      font-size: 0.83rem !important;
+      font-weight: 700 !important;
+      transition: all 0.25s !important;
+    }
+    .nav-cta:hover {
+      background: var(--blue) !important;
+      color: var(--bg) !important;
+      box-shadow: var(--glow-sm) !important;
+    }
+    .nav-cta::after { display: none !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--blue);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    #hero-canvas {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-glow-orb {
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0, 102, 221, 0.18) 0%, transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 1.5rem;
+      max-width: 860px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 1.2rem;
+      border: 1px solid rgba(0, 200, 255, 0.4);
+      border-radius: 20px;
+      font-family: 'Orbitron', monospace;
+      font-size: 0.63rem;
+      letter-spacing: 0.15em;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.7s ease both;
+      text-align: center;
+      line-height: 1.65;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--blue);
+      animation: blink 1.5s ease-in-out infinite;
+    }
+
+    .hero-title {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: clamp(2.6rem, 6.5vw, 5.2rem);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+    .hero-title .t1 { color: #ffffff; display: block; }
+    .hero-title .t2 {
+      color: var(--blue);
+      text-shadow: 0 0 40px rgba(0,200,255,0.6);
+      display: block;
+      margin-top: 0.1em;
+    }
+
+    .hero-sub {
+      font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.05em;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+
+    .hero-desc {
+      font-size: clamp(0.88rem, 1.4vw, 1rem);
+      color: rgba(212,238,255,0.75);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.7s 0.4s ease both;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.9rem 2.4rem;
+      background: linear-gradient(130deg, var(--blue2), var(--blue));
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 20px rgba(0, 102, 221, 0.5);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(0, 200, 255, 0.5);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 0.9rem 2.4rem;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+    .btn-outline:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 2;
+    }
+    .scroll-bar {
+      width: 1px; height: 44px;
+      background: linear-gradient(to bottom, var(--blue), transparent);
+      animation: scrollPulse 1.8s ease-in-out infinite;
+    }
+    .scroll-txt {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      color: var(--muted);
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 6rem 0; }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .sec-label {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .sec-title {
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0.9rem;
+    }
+    .sec-title .accent { color: var(--blue); }
+
+    .sec-desc {
+      color: var(--muted);
+      font-size: 0.97rem;
+      max-width: 560px;
+      line-height: 1.8;
+    }
+
+    .line-deco {
+      width: 50px; height: 2px;
+      background: linear-gradient(90deg, var(--blue), transparent);
+      margin: 1.2rem 0;
+    }
+
+    /* ── SERVICES ── */
+    #services {
+      background: var(--bg2);
+      position: relative;
+    }
+    #services::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent 0%, var(--blue) 50%, transparent 100%);
+      opacity: 0.5;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.2rem;
+      transition: all 0.35s;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .service-card:hover {
+      border-color: rgba(0, 200, 255, 0.45);
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.5), 0 0 20px rgba(0,200,255,0.1);
+    }
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      width: 54px; height: 54px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.4rem;
+      background: rgba(0,200,255,0.05);
+      transition: all 0.3s;
+    }
+    .service-icon svg {
+      width: 26px; height: 26px;
+      color: var(--blue);
+      stroke: currentColor;
+      transition: filter 0.3s;
+    }
+    .service-card:hover .service-icon {
+      border-color: var(--blue);
+      background: rgba(0,200,255,0.1);
+      box-shadow: var(--glow-sm);
+    }
+    .service-card:hover .service-icon svg {
+      filter: drop-shadow(0 0 6px var(--blue));
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+    }
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.4rem;
+      line-height: 1.75;
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag {
+      padding: 0.18rem 0.65rem;
+      background: rgba(0,200,255,0.07);
+      border: 1px solid rgba(0,200,255,0.15);
+      border-radius: 3px;
+      font-size: 0.72rem;
+      color: rgba(0,200,255,0.8);
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1.5rem;
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .service-link:hover { opacity: 1; }
+
+    /* ── WHY ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 3rem;
+    }
+
+    .features { display: flex; flex-direction: column; gap: 1.2rem; }
+
+    .feature {
+      display: flex;
+      gap: 1.1rem;
+      padding: 1.4rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+    }
+    .feature:hover {
+      border-color: rgba(0,200,255,0.4);
+      transform: translateX(6px);
+      box-shadow: -4px 0 0 var(--blue), 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .feat-num {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: 1.3rem;
+      color: var(--blue);
+      opacity: 0.5;
+      min-width: 1.8rem;
+      line-height: 1;
+      padding-top: 4px;
+    }
+
+    .feature h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .feature p  { color: var(--muted); font-size: 0.88rem; line-height: 1.7; }
+
+    .stat-panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+    .stat-panel::after {
+      content: 'MOWEN';
+      position: absolute;
+      bottom: -16px; right: -8px;
+      font-family: 'Orbitron', monospace;
+      font-size: 5rem;
+      font-weight: 900;
+      color: rgba(0,200,255,0.04);
+      pointer-events: none;
+    }
+
+    .stat-big {
+      font-family: 'Orbitron', monospace;
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      font-weight: 900;
+      color: var(--blue);
+      text-shadow: var(--glow);
+      display: block;
+      line-height: 1;
+    }
+    .stat-big-label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .stat-cell {
+      background: rgba(0,200,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .stat-cell .num {
+      font-family: 'Orbitron', monospace;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--blue);
+    }
+    .stat-cell .lbl {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    /* ── WORKS ── */
+    #works { background: var(--bg2); }
+    #works::before {
+      content: '';
+      display: block;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, var(--blue) 50%, transparent 100%);
+      opacity: 0.3;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .work-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .work-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,200,255,0.04) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .work-card:hover {
+      border-color: rgba(0,200,255,0.5);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0,200,255,0.08);
+    }
+    .work-card:hover::before { opacity: 1; }
+
+    .work-category {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .work-client {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .work-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 1.6rem;
+      flex: 1;
+    }
+
+    .work-metrics {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1.2rem;
+      background: rgba(0,200,255,0.04);
+      border: 1px solid rgba(0,200,255,0.12);
+      border-radius: 8px;
+      margin-bottom: 1.2rem;
+    }
+    .work-metric { display: flex; flex-direction: column; gap: 0.2rem; }
+    .wm-num {
+      font-family: 'Orbitron', monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--blue);
+      line-height: 1;
+    }
+    .wm-unit { font-size: 0.85rem; }
+    .wm-label { font-size: 0.72rem; color: var(--muted); }
+
+    .work-arrow {
+      display: flex;
+      justify-content: flex-end;
+      color: var(--blue);
+      opacity: 0.5;
+      transition: all 0.3s;
+    }
+    .work-card:hover .work-arrow {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 900px) {
+      .works-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── FLOW ── */
+    #flow {
+      background: var(--bg2);
+      position: relative;
+    }
+    #flow::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent 0%, var(--blue) 50%, transparent 100%);
+      opacity: 0.5;
+    }
+
+    .flow-wrap {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      margin-top: 3rem;
+      position: relative;
+    }
+    .flow-wrap::before {
+      content: '';
+      position: absolute;
+      top: 40px; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), var(--border), transparent);
+    }
+
+    .flow-step { text-align: center; padding: 0 1rem 0; }
+
+    .flow-circle {
+      width: 64px; height: 64px;
+      border: 1px solid var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      background: var(--bg2);
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s;
+    }
+    .flow-circle svg {
+      width: 24px; height: 24px;
+      color: var(--blue);
+      stroke: currentColor;
+      transition: filter 0.3s;
+    }
+    .flow-step:hover .flow-circle {
+      background: rgba(0,200,255,0.1);
+      box-shadow: var(--glow-sm);
+    }
+    .flow-step:hover .flow-circle svg {
+      filter: drop-shadow(0 0 5px var(--blue));
+    }
+
+    .flow-num-label {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.6rem;
+      color: var(--blue);
+      letter-spacing: 0.2em;
+      margin-bottom: 0.5rem;
+    }
+
+    .flow-step h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .flow-step p  { color: var(--muted); font-size: 0.78rem; line-height: 1.6; }
+
+    /* ── CTA ── */
+    #cta { position: relative; overflow: hidden; }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 60%, rgba(0, 102, 221, 0.12) 0%, transparent 65%);
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 4.5rem 2rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .cta-inner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), var(--purple), transparent);
+    }
+
+    .cta-title {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+    .cta-desc {
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      font-size: 0.97rem;
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #020710;
+      border-top: 1px solid var(--border);
+      padding: 3.5rem 0 1.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-logo {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--blue);
+      text-shadow: var(--glow-sm);
+      margin-bottom: 0.7rem;
+    }
+
+    .footer-brand p {
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.8;
+    }
+
+    .footer-col h5 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.5rem; }
+    .footer-col a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.83rem;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--blue); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .footer-bottom p, .footer-bottom a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-decoration: none;
+    }
+    .footer-bottom a:hover { color: var(--blue); }
+
+    /* ── REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── KEYFRAMES ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.25; }
+      50%       { opacity: 1; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .flow-wrap {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+      .flow-wrap::before { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 68px; left: 0; right: 0;
+        background: rgba(3, 8, 18, 0.98);
+        padding: 1.5rem 2rem;
+        gap: 1.2rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .flow-wrap { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .stat-row { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════ NAVIGATION ════ -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">MOW<span>EN</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="services.html">サービス</a></li>
+    <li><a href="works.html">実績</a></li>
+    <li><a href="about.html">会社概要</a></li>
+    <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-glow-orb"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge"><span>Mowen Strategy<br>Consulting</span></div>
+
+    <h1 class="hero-title">
+      <span class="t1">人を増やさずに、</span>
+      <span class="t2">できることを増やす。</span>
+    </h1>
+
+    <p class="hero-sub">Web・業務・採用。AIがあれば、3つ同時に動かせる。</p>
+
+    <p class="hero-desc">
+      MOWEN, Inc（株式会社メーヴェ）は、生成AIを最大限活用した<br>
+      Web制作・業務効率化・採用強化で、中小企業の成長を伴走支援します。
+    </p>
+
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-primary">無料相談を予約する</a>
+      <a href="services.html" class="btn-outline">サービスを見る</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-bar"></div>
+    <span class="scroll-txt">SCROLL</span>
+  </div>
+</section>
+
+<!-- ════ SERVICES ════ -->
+<section id="services">
+  <div class="container">
+    <div class="reveal">
+      <p class="sec-label">// Services</p>
+      <h2 class="sec-title">3つの<span class="accent">コア事業</span>で<br>ビジネスを加速する</h2>
+      <div class="line-deco"></div>
+      <p class="sec-desc">生成AIを軸に、制作・業務効率化・採用をワンストップで支援。従来より早く・安く・確実に成果を出します。</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <h3>AI活用 Web制作・開発</h3>
+        <p>生成AIをフル活用することで、従来比<strong style="color:var(--blue);">30〜50%のコスト削減</strong>と<strong style="color:var(--blue);">最短2週間納品</strong>を実現。品質を落とさず、スピードと価格で圧倒的な優位性を提供します。</p>
+        <div class="tags">
+          <span class="tag">コーポレートサイト</span>
+          <span class="tag">LP制作</span>
+          <span class="tag">EC開発</span>
+          <span class="tag">WordPress</span>
+          <span class="tag">高速・低コスト</span>
+        </div>
+        <a href="services.html#web" class="service-link">詳細を見る →</a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/>
+            <line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/>
+            <line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/>
+            <line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/>
+            <line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>
+          </svg>
+        </div>
+        <h3>生成AI × 業務効率化コンサル</h3>
+        <p>ChatGPT・Claude等の活用から業務フロー自動化まで、「何から始めればいいかわからない」段階から伴走支援。人手不足・コスト高に悩む中小企業に、AIによる即効性のある効率化を届けます。</p>
+        <div class="tags">
+          <span class="tag">生成AI活用</span>
+          <span class="tag">業務自動化</span>
+          <span class="tag">AIリテラシー研修</span>
+          <span class="tag">月額伴走支援</span>
+        </div>
+        <a href="services.html#ai" class="service-link">詳細を見る →</a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>採用強化 Webマーケティング</h3>
+        <p>採用サイト制作にとどまらず、<strong style="color:var(--blue);">応募率・面談率の改善</strong>と<strong style="color:var(--blue);">採用ミスマッチの解消</strong>まで踏み込んで支援。データ分析を駆使し「欲しい人材が来る仕組み」を構築します。</p>
+        <div class="tags">
+          <span class="tag">採用LP制作</span>
+          <span class="tag">応募率改善</span>
+          <span class="tag">ミスマッチ解消</span>
+          <span class="tag">データ分析</span>
+        </div>
+        <a href="services.html#recruit" class="service-link">詳細を見る →</a>
+      </div>
+    </div>
+
+    <!-- 補助サービス -->
+    <div class="reveal" style="margin-top: 2rem;">
+      <div style="background: rgba(0,200,255,0.04); border: 1px solid var(--border); border-radius: 10px; padding: 1.4rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <div style="display:flex; align-items:center; gap:1rem;">
+          <span style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border:1px solid rgba(0,200,255,0.3); border-radius:7px; background:rgba(0,200,255,0.06); flex-shrink:0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          </span>
+          <div>
+            <div style="font-size:0.72rem; color:var(--blue); letter-spacing:0.15em; font-family:'Orbitron',monospace; margin-bottom:0.2rem;">// SUPPLEMENTAL SERVICE</div>
+            <strong style="font-size:0.97rem;">バックオフィスDX</strong>
+            <span style="color:var(--muted); font-size:0.85rem; margin-left:0.8rem;">インボイス対応・会計ソフト・電子化など、既存顧客向けに追加提供</span>
+          </div>
+        </div>
+        <a href="services.html#backoffice" class="service-link" style="white-space:nowrap;">詳細を見る →</a>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:2.5rem;" class="reveal">
+      <a href="services.html" class="btn-outline" style="font-size:0.88rem;">サービス詳細をすべて見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ WHY MOWEN ════ -->
+<section id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <p class="sec-label reveal">// Why MOWEN</p>
+        <h2 class="sec-title reveal">なぜMOWENが<br><span class="accent">選ばれるのか</span></h2>
+        <div class="line-deco reveal"></div>
+
+        <div class="features">
+          <div class="feature reveal">
+            <div class="feat-num">01</div>
+            <div>
+              <h4>中小企業・ローカルビジネス特化</h4>
+              <p>大手エージェンシーでは対応しきれない固有課題に深く向き合い、リソースと予算に合った最適解を提案します。</p>
+            </div>
+          </div>
+          <div class="feature reveal">
+            <div class="feat-num">02</div>
+            <div>
+              <h4>AI活用による高品質 × 低コストの実現</h4>
+              <p>最新AIツールを積極活用し、従来比で短納期・低コスト・高品質のアウトプットを実現。ROIを最大化します。</p>
+            </div>
+          </div>
+          <div class="feature reveal">
+            <div class="feat-num">03</div>
+            <div>
+              <h4>制作〜運用まで一貫した伴走支援</h4>
+              <p>公開がゴールではありません。データ分析・改善提案・継続運用まで長期的に伴走し、確かな成果を生み出します。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="stat-panel">
+          <span class="stat-big" data-count="98">0</span>
+          <div class="stat-big-label">クライアント満足度（%）</div>
+          <div class="stat-row">
+            <div class="stat-cell">
+              <div class="num" data-count="150" data-suffix="+">0</div>
+              <div class="lbl">累計支援社数</div>
+            </div>
+            <div class="stat-cell">
+              <div class="num" data-count="3" data-suffix="x">0</div>
+              <div class="lbl">平均ROI倍率</div>
+            </div>
+            <div class="stat-cell">
+              <div class="num" data-count="48" data-suffix="h">0</div>
+              <div class="lbl">最短着手時間</div>
+            </div>
+            <div class="stat-cell">
+              <div class="num" data-count="5" data-suffix="年">0</div>
+              <div class="lbl">業界支援実績</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FLOW ════ -->
+<section id="flow">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <p class="sec-label">// Process</p>
+      <h2 class="sec-title">ご支援の<span class="accent">流れ</span></h2>
+      <div class="line-deco" style="margin:1.2rem auto;"></div>
+      <p class="sec-desc" style="margin:0 auto;">初回相談から継続改善まで、明確なプロセスで進行します。</p>
+    </div>
+
+    <div class="flow-wrap">
+      <div class="flow-step reveal">
+        <div class="flow-num-label">STEP 01</div>
+        <div class="flow-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h4>無料相談</h4>
+        <p>課題・目標をヒアリング。最適な支援プランをご提案します。</p>
+      </div>
+      <div class="flow-step reveal">
+        <div class="flow-num-label">STEP 02</div>
+        <div class="flow-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </div>
+        <h4>調査・設計</h4>
+        <p>市場・競合分析をもとに戦略的なWebサイト構成を策定します。</p>
+      </div>
+      <div class="flow-step reveal">
+        <div class="flow-num-label">STEP 03</div>
+        <div class="flow-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <h4>制作・実装</h4>
+        <p>AIツールも駆使しながら、高品質なサイトを迅速に構築します。</p>
+      </div>
+      <div class="flow-step reveal">
+        <div class="flow-num-label">STEP 04</div>
+        <div class="flow-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </div>
+        <h4>公開・運用</h4>
+        <p>公開後もSEO・広告・SNSを統合的に運用し集客を最大化します。</p>
+      </div>
+      <div class="flow-step reveal">
+        <div class="flow-num-label">STEP 05</div>
+        <div class="flow-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/>
+            <line x1="2" y1="20" x2="22" y2="20"/>
+          </svg>
+        </div>
+        <h4>分析・改善</h4>
+        <p>月次レポートをもとにPDCAを回し、継続的に成果を向上させます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ WORKS ════ -->
+<section id="works">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <p class="sec-label">// Works</p>
+      <h2 class="sec-title">支援<span class="accent">実績</span></h2>
+      <div class="line-deco" style="margin:1.2rem auto;"></div>
+      <p class="sec-desc" style="margin:0 auto;">中小企業・ローカルビジネスの成長を、具体的な数字で。</p>
+    </div>
+
+    <div class="works-grid">
+      <a href="works.html" class="work-card reveal">
+        <div class="work-category">Web制作・開発</div>
+        <div class="work-client">飲食チェーン / 居酒屋業態</div>
+        <h3 class="work-title">採用サイト構築 ×<br>SNSマーケティング</h3>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <span class="wm-num">3<span class="wm-unit">倍</span></span>
+            <span class="wm-label">応募数</span>
+          </div>
+          <div class="work-metric">
+            <span class="wm-num">40<span class="wm-unit">%</span></span>
+            <span class="wm-label">採用コスト削減</span>
+          </div>
+        </div>
+        <div class="work-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="works.html" class="work-card reveal">
+        <div class="work-category">AI × 業務効率化</div>
+        <div class="work-client">中堅製造業 / 従業員80名</div>
+        <h3 class="work-title">生成AI導入 ×<br>業務フロー自動化</h3>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <span class="wm-num">40<span class="wm-unit">h</span></span>
+            <span class="wm-label">月間工数削減/人</span>
+          </div>
+          <div class="work-metric">
+            <span class="wm-num">2.8<span class="wm-unit">倍</span></span>
+            <span class="wm-label">処理スピード向上</span>
+          </div>
+        </div>
+        <div class="work-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="works.html" class="work-card reveal">
+        <div class="work-category">採用強化</div>
+        <div class="work-client">美容サロン / 都内3店舗</div>
+        <h3 class="work-title">採用特化LP ×<br>Web広告運用</h3>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <span class="wm-num">60<span class="wm-unit">%</span></span>
+            <span class="wm-label">面談率改善</span>
+          </div>
+          <div class="work-metric">
+            <span class="wm-num">0<span class="wm-unit">→3</span></span>
+            <span class="wm-label">採用ミスマッチ解消</span>
+          </div>
+        </div>
+        <div class="work-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+      </a>
+    </div>
+
+    <div class="reveal" style="text-align:center; margin-top:3rem;">
+      <a href="works.html" class="btn-outline">すべての実績を見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CTA ════ -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <p class="sec-label" style="text-align:center;">// Get Started</p>
+      <h2 class="cta-title">
+        まずは<span class="accent">無料相談</span>から<br>始めましょう
+      </h2>
+      <p class="cta-desc">
+        現在の課題や目標をお気軽にお聞かせください。<br>
+        最適なご支援プランを無料でご提案いたします。
+      </p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-primary">無料相談を予約する</a>
+        <a href="services.html" class="btn-outline">サービス一覧を見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">MOWEN, Inc</div>
+        <p>株式会社メーヴェ<br>中小企業・ローカルビジネス専門の<br>Webコンサルティングカンパニー。<br>AIと共に、あなたのビジネスの未来を創ります。</p>
+      </div>
+      <div class="footer-col">
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="services.html#web">AI活用 Web制作・開発</a></li>
+          <li><a href="services.html#ai">生成AI×業務効率化</a></li>
+          <li><a href="services.html#recruit">採用強化Web</a></li>
+          <li><a href="services.html#backoffice">バックオフィスDX</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>会社情報</h5>
+        <ul>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="about.html#mission">ミッション</a></li>
+          <li><a href="about.html#values">バリュー</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>お問い合わせ</h5>
+        <ul>
+          <li><a href="contact.html">無料相談を予約</a></li>
+          <li><a href="contact.html#faq">よくある質問</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 MOWEN, Inc（株式会社メーヴェ）All rights reserved.</p>
+      <div style="display:flex; gap:1.5rem;">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ─── Canvas Hero Animation ─── */
+const canvas = document.getElementById('hero-canvas');
+const ctx = canvas.getContext('2d');
+
+let W, H;
+function resize() {
+  W = canvas.width  = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+const PARTICLE_COUNT = 90;
+const particles = Array.from({ length: PARTICLE_COUNT }, () => ({
+  x: Math.random() * W,
+  y: Math.random() * H,
+  vx: (Math.random() - 0.5) * 0.55,
+  vy: (Math.random() - 0.5) * 0.55,
+  r:  Math.random() * 1.6 + 0.4,
+  alpha: Math.random() * 0.45 + 0.15
+}));
+
+function drawFrame() {
+  ctx.clearRect(0, 0, W, H);
+
+  // Grid
+  ctx.strokeStyle = 'rgba(0,200,255,0.045)';
+  ctx.lineWidth = 1;
+  const g = 70;
+  for (let x = 0; x < W; x += g) {
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+  }
+  for (let y = 0; y < H; y += g) {
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+  }
+
+  // Connections + particles
+  for (let i = 0; i < particles.length; i++) {
+    const p = particles[i];
+    for (let j = i + 1; j < particles.length; j++) {
+      const q = particles[j];
+      const dx = p.x - q.x, dy = p.y - q.y;
+      const d = Math.sqrt(dx*dx + dy*dy);
+      if (d < 140) {
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(0,200,255,${0.12 * (1 - d/140)})`;
+        ctx.lineWidth = 0.6;
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(q.x, q.y);
+        ctx.stroke();
+      }
+    }
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(0,200,255,${p.alpha})`;
+    ctx.fill();
+
+    p.x += p.vx; p.y += p.vy;
+    if (p.x < 0 || p.x > W) p.vx *= -1;
+    if (p.y < 0 || p.y > H) p.vy *= -1;
+  }
+
+  requestAnimationFrame(drawFrame);
+}
+drawFrame();
+
+/* ─── Scroll Reveal ─── */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* ─── Counter Animation ─── */
+const countObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el     = e.target;
+    const target = +el.dataset.count;
+    const suffix = el.dataset.suffix || '';
+    let current  = 0;
+    const step   = target / 55;
+    const timer  = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = Math.floor(current) + suffix;
+      if (current >= target) clearInterval(timer);
+    }, 18);
+    countObs.unobserve(el);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
+
+/* ─── Mobile Menu ─── */
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+/* ─── Nav Background on Scroll ─── */
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('mainNav');
+  nav.style.background = window.scrollY > 60
+    ? 'rgba(3,8,18,0.98)'
+    : 'rgba(3,8,18,0.82)';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ・無料相談 | MOWEN, Inc（株式会社メーヴェ）</title>
+  <meta name="description" content="MOWEN, Inc（株式会社メーヴェ）へのお問い合わせ・無料相談はこちら。Web制作・マーケティング・AI×DXについてお気軽にご相談ください。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="お問い合わせ | MOWEN, Inc">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:    #030812;
+      --bg2:   #060f1e;
+      --card:  rgba(5,18,40,0.85);
+      --blue:  #00c8ff;
+      --blue2: #0066dd;
+      --purple:#7b21ff;
+      --text:  #d4eeff;
+      --muted: #627f9a;
+      --border:rgba(0,200,255,0.18);
+      --glow:  0 0 30px rgba(0,200,255,0.45);
+      --glow-sm:0 0 14px rgba(0,200,255,0.3);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.75;
+    }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--blue2); border-radius: 3px; }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      background: rgba(3,8,18,0.95);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: var(--blue);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-shadow: var(--glow-sm);
+    }
+    .nav-logo span { color: #fff; }
+    .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a.active { color: var(--blue); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0; right: 0;
+      height: 1px;
+      background: var(--blue);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta {
+      padding: 0.45rem 1.4rem !important;
+      border: 1px solid var(--blue) !important;
+      border-radius: 4px;
+      color: var(--blue) !important;
+      font-size: 0.83rem !important;
+      font-weight: 700 !important;
+      background: rgba(0,200,255,0.08) !important;
+    }
+    .nav-cta::after { display: none !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--blue); border-radius: 2px; }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 10rem 0 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 80%, rgba(0,102,221,0.12) 0%, transparent 65%);
+    }
+    .page-header::after {
+      content: 'CONTACT';
+      position: absolute;
+      bottom: -20px; left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Orbitron', monospace;
+      font-size: clamp(4rem, 12vw, 10rem);
+      font-weight: 900;
+      color: rgba(0,200,255,0.035);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .page-label {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .page-title {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .page-title .accent { color: var(--blue); }
+    .page-desc { color: var(--muted); font-size: 1rem; max-width: 520px; margin: 0 auto; }
+
+    section { padding: 6rem 0; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
+
+    /* CONTACT LAYOUT */
+    #contact-form { padding: 4rem 0 6rem; }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* Info side */
+    .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+    }
+    .info-card:hover {
+      border-color: rgba(0,200,255,0.4);
+      transform: translateX(4px);
+    }
+    .info-card-icon {
+      width: 44px; height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(0,200,255,0.22);
+      border-radius: 10px;
+      background: rgba(0,200,255,0.05);
+      margin-bottom: 0.8rem;
+    }
+    .info-card-icon svg {
+      width: 22px; height: 22px;
+      color: var(--blue);
+      stroke: currentColor;
+    }
+    .info-card:hover .info-card-icon svg {
+      filter: drop-shadow(0 0 5px var(--blue));
+    }
+    .info-card h4 { font-size: 0.88rem; font-weight: 700; color: var(--blue); margin-bottom: 0.4rem; }
+    .info-card p  { color: var(--muted); font-size: 0.83rem; line-height: 1.7; }
+
+    .response-badge {
+      background: rgba(0,200,255,0.06);
+      border: 1px solid rgba(0,200,255,0.2);
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .badge-dot {
+      width: 8px; height: 8px;
+      background: var(--blue);
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 0 8px var(--blue);
+      animation: blink 1.5s ease-in-out infinite;
+    }
+    .response-badge p { color: var(--muted); font-size: 0.82rem; line-height: 1.6; }
+
+    /* Form side */
+    .form-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.5rem;
+      backdrop-filter: blur(12px);
+      position: relative;
+      overflow: hidden;
+    }
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    }
+
+    .form-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .form-subtitle {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+    .form-group label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .form-group label .req {
+      color: var(--blue);
+      margin-left: 0.2rem;
+      font-size: 0.75rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(0,200,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      color: var(--text);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.9rem;
+      transition: all 0.25s;
+      outline: none;
+      width: 100%;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--muted); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue);
+      background: rgba(0,200,255,0.07);
+      box-shadow: 0 0 0 3px rgba(0,200,255,0.1);
+    }
+    .form-group select { cursor: pointer; appearance: none; }
+    .form-group select option { background: #0a1a30; color: var(--text); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .privacy-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      margin-bottom: 1.5rem;
+    }
+    .privacy-check input[type="checkbox"] {
+      width: 16px; height: 16px;
+      margin-top: 3px;
+      cursor: pointer;
+      accent-color: var(--blue);
+      flex-shrink: 0;
+    }
+    .privacy-check label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .privacy-check a { color: var(--blue); text-decoration: none; }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(130deg, var(--blue2), var(--blue));
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 20px rgba(0,102,221,0.5);
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0,200,255,0.5);
+    }
+
+    /* SUCCESS MESSAGE */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .form-success .success-icon {
+      width: 72px; height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(0,200,255,0.35);
+      border-radius: 50%;
+      background: rgba(0,200,255,0.08);
+      margin: 0 auto 1.2rem;
+      box-shadow: 0 0 24px rgba(0,200,255,0.2);
+    }
+    .form-success .success-icon svg {
+      width: 36px; height: 36px;
+      color: var(--blue);
+      stroke: currentColor;
+    }
+    .form-success h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--blue); }
+    .form-success p { color: var(--muted); font-size: 0.9rem; }
+
+    /* FAQ */
+    #faq { background: var(--bg2); position: relative; }
+    #faq::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    .sec-label {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .sec-title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.3; margin-bottom: 0.8rem; }
+    .sec-title .accent { color: var(--blue); }
+    .line-deco { width: 50px; height: 2px; background: linear-gradient(90deg, var(--blue), transparent); margin: 1.2rem 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 3rem; }
+
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+    .faq-q {
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      user-select: none;
+    }
+    .faq-q:hover { color: var(--blue); }
+    .faq-icon {
+      width: 20px; height: 20px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem;
+      color: var(--blue);
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.5rem; }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 1.5rem 1.2rem; }
+    .faq-a p { color: var(--muted); font-size: 0.9rem; line-height: 1.8; }
+
+    footer {
+      background: #020710;
+      border-top: 1px solid var(--border);
+      padding: 3rem 0 1.5rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
+    .footer-logo { font-family: 'Orbitron', monospace; font-weight: 900; font-size: 1.1rem; color: var(--blue); text-shadow: var(--glow-sm); margin-bottom: 0.7rem; }
+    .footer-brand p { color: var(--muted); font-size: 0.82rem; line-height: 1.8; }
+    .footer-col h5 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.5rem; }
+    .footer-col a { color: var(--muted); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--blue); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+    .footer-bottom p, .footer-bottom a { color: var(--muted); font-size: 0.78rem; text-decoration: none; }
+    .footer-bottom a:hover { color: var(--blue); }
+
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; top: 68px; left: 0; right: 0;
+        background: rgba(3,8,18,0.98);
+        padding: 1.5rem 2rem; gap: 1.2rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">MOW<span>EN</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="services.html">サービス</a></li>
+    <li><a href="works.html">実績</a></li>
+    <li><a href="about.html">会社概要</a></li>
+    <li><a href="contact.html" class="nav-cta active">お問い合わせ</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <p class="page-label">// Contact</p>
+  <h1 class="page-title">まずは<span class="accent">無料相談</span>から<br>始めましょう</h1>
+  <p class="page-desc">課題や目標をお聞かせください。最適な支援プランを無料でご提案します。</p>
+</div>
+
+<!-- CONTACT FORM -->
+<section id="contact-form">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- Info -->
+      <div class="contact-info reveal">
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h4>無料相談・見積もり</h4>
+          <p>初回のご相談・お見積もりは完全無料です。予算・規模に関わらずお気軽にご連絡ください。</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h4>全国対応・リモート可</h4>
+          <p>全国どこでも対応可能です。ZoomやGoogle Meetでのオンライン相談が中心ですが、対面もご相談ください。</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h4>どんな課題でも歓迎</h4>
+          <p>「何から始めたらいいかわからない」という段階からでもご支援できます。まずは現状をお聞かせください。</p>
+        </div>
+        <div class="response-badge">
+          <div class="badge-dot"></div>
+          <p>通常<strong>1営業日以内</strong>にご返信します。お急ぎの場合はその旨をお書き添えください。</p>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-card reveal">
+        <div id="formContent">
+          <h2 class="form-title">お問い合わせフォーム</h2>
+          <p class="form-subtitle">以下のフォームにご入力ください。<span style="color:var(--blue);">＊</span>は必須項目です。</p>
+
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>お名前<span class="req">＊</span></label>
+                <input type="text" placeholder="山田 太郎" required>
+              </div>
+              <div class="form-group">
+                <label>会社名・屋号</label>
+                <input type="text" placeholder="株式会社〇〇">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>メールアドレス<span class="req">＊</span></label>
+                <input type="email" placeholder="info@example.com" required>
+              </div>
+              <div class="form-group">
+                <label>電話番号</label>
+                <input type="tel" placeholder="03-xxxx-xxxx">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>ご興味のあるサービス<span class="req">＊</span></label>
+              <select required>
+                <option value="" disabled selected>選択してください</option>
+                <option>Web制作・開発</option>
+                <option>デジタルマーケティング（SEO・広告・SNS）</option>
+                <option>AI×DXコンサルティング</option>
+                <option>複数のサービスをまとめて</option>
+                <option>まだ決まっていない・相談したい</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>おおよそのご予算</label>
+              <select>
+                <option value="" disabled selected>選択してください（任意）</option>
+                <option>〜30万円</option>
+                <option>30〜50万円</option>
+                <option>50〜100万円</option>
+                <option>100万円以上</option>
+                <option>月額での継続支援を検討中</option>
+                <option>未定・要相談</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>お問い合わせ内容<span class="req">＊</span></label>
+              <textarea placeholder="現在の課題・実現したいこと・ご質問などをご自由にお書きください。" required></textarea>
+            </div>
+
+            <div class="privacy-check">
+              <input type="checkbox" id="privacy" required>
+              <label for="privacy">
+                <a href="#">プライバシーポリシー</a>に同意の上、送信します。
+                個人情報はお問い合わせ対応のみに使用し、第三者への提供は行いません。
+              </label>
+            </div>
+
+            <button type="submit" class="submit-btn">送信する →</button>
+          </form>
+        </div>
+
+        <!-- Success -->
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h3>お問い合わせを受け付けました</h3>
+          <p>ご連絡いただきありがとうございます。<br>通常1営業日以内にご返信いたします。</p>
+          <p style="margin-top:1rem;">
+            <a href="index.html" style="color:var(--blue); text-decoration:none; font-size:0.9rem;">← トップページに戻る</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <p class="sec-label">// FAQ</p>
+      <h2 class="sec-title">よくある<span class="accent">ご質問</span></h2>
+      <div class="line-deco" style="margin:1.2rem auto;"></div>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>相談だけでも大丈夫ですか？</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p>はい、もちろんです。「まだ検討段階」「何から始めたらいいかわからない」という状態でも歓迎します。まずは現状のお悩みをお聞かせください。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>小規模な案件でも対応していただけますか？</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p>はい、中小企業・個人事業主・ローカルビジネスを専門に支援しています。予算規模に関わらずご相談ください。現状のご予算内でできる最善策をご提案します。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>対応エリアはどこですか？</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p>全国対応です。Zoom・Google Meet等のビデオ通話を活用したオンライン完結でのご支援が中心ですが、エリアによっては対面でのご相談も可能です。お気軽にご相談ください。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>複数のサービスをまとめて依頼することはできますか？</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p>はい、Web制作・マーケティング・AI×DXをまとめてご依頼いただくことが多く、むしろ推奨しています。一貫した戦略で取り組むことで、より高い成果が見込めます。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>返答までどのくらい時間がかかりますか？</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p>通常1営業日以内にご返信します。土日祝日は翌営業日のご返信となりますのでご了承ください。お急ぎの場合はフォームにその旨をご記入いただくか、件名に「至急」とご記入ください。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">MOWEN, Inc</div>
+        <p>株式会社メーヴェ<br>中小企業・ローカルビジネス専門の<br>Webコンサルティングカンパニー</p>
+      </div>
+      <div class="footer-col">
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="services.html#web">Web制作・開発</a></li>
+          <li><a href="services.html#marketing">デジタルマーケティング</a></li>
+          <li><a href="services.html#ai">AI×DXコンサル</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>会社情報</h5>
+        <ul>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="about.html#mission">ミッション</a></li>
+          <li><a href="about.html#values">バリュー</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>お問い合わせ</h5>
+        <ul>
+          <li><a href="contact.html">お問い合わせフォーム</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 MOWEN, Inc（株式会社メーヴェ）All rights reserved.</p>
+      <div style="display:flex; gap:1.5rem;">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('formContent').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+</script>
+</body>
+</html>

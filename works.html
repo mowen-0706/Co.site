@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>支援実績 | MOWEN, Inc – AI Web制作・業務効率化・採用強化</title>
+  <meta name="description" content="MOWEN, Incの支援実績一覧。中小企業・ローカルビジネスのWeb制作、AI業務効率化、採用強化における具体的な成果をご紹介します。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="支援実績 | MOWEN, Inc">
+  <meta property="og:description" content="中小企業・ローカルビジネスの成長を、具体的な数字で。MOWEN, Incの支援実績。">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:    #030812;
+      --bg2:   #060f1e;
+      --card:  rgba(5,18,40,0.85);
+      --blue:  #00c8ff;
+      --blue2: #0066dd;
+      --purple:#7b21ff;
+      --text:  #d4eeff;
+      --muted: #627f9a;
+      --border:rgba(0,200,255,0.18);
+      --glow:  0 0 30px rgba(0,200,255,0.45);
+      --glow-sm:0 0 14px rgba(0,200,255,0.3);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.75;
+    }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--blue2); border-radius: 3px; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      background: rgba(3,8,18,0.95);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: var(--blue);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-shadow: var(--glow-sm);
+    }
+    .nav-logo span { color: #fff; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a.active { color: var(--blue); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0; right: 0;
+      height: 1px;
+      background: var(--blue);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta {
+      padding: 0.45rem 1.4rem !important;
+      border: 1px solid var(--blue) !important;
+      border-radius: 4px;
+      color: var(--blue) !important;
+      font-size: 0.83rem !important;
+      font-weight: 700 !important;
+    }
+    .nav-cta:hover {
+      background: var(--blue) !important;
+      color: var(--bg) !important;
+      box-shadow: var(--glow-sm) !important;
+    }
+    .nav-cta::after { display: none !important; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--blue);
+      border-radius: 2px;
+    }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      padding: 10rem 0 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 80%, rgba(0,102,221,0.12) 0%, transparent 65%);
+    }
+    .page-header::after {
+      content: 'WORKS';
+      position: absolute;
+      bottom: -20px; left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Orbitron', monospace;
+      font-size: clamp(4rem, 12vw, 10rem);
+      font-weight: 900;
+      color: rgba(0,200,255,0.04);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .page-label {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .page-title {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    .page-title .accent { color: var(--blue); }
+    .page-desc {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── LAYOUT ── */
+    section { padding: 6rem 0; }
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .sec-label {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .sec-title {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+    }
+    .sec-title .accent { color: var(--blue); }
+    .line-deco {
+      width: 50px; height: 2px;
+      background: linear-gradient(90deg, var(--blue), transparent);
+      margin: 1.2rem 0;
+    }
+
+    /* ── FILTER TABS ── */
+    .filter-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .filter-btn {
+      padding: 0.4rem 1.1rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: transparent;
+      color: var(--muted);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+    .filter-btn.active {
+      background: rgba(0,200,255,0.1);
+      border-color: var(--blue);
+      color: var(--blue);
+      box-shadow: var(--glow-sm);
+    }
+
+    /* ── WORKS GRID ── */
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .work-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+      cursor: default;
+    }
+    .work-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,200,255,0.04) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .work-card:hover {
+      border-color: rgba(0,200,255,0.5);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0,200,255,0.08);
+    }
+    .work-card:hover::before { opacity: 1; }
+
+    /* ── hidden for filter ── */
+    .work-card.hidden {
+      display: none;
+    }
+
+    .work-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.6rem;
+    }
+    .work-category {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      color: var(--blue);
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border: 1px solid rgba(0,200,255,0.3);
+      border-radius: 3px;
+      background: rgba(0,200,255,0.06);
+      white-space: nowrap;
+    }
+    .work-year {
+      font-size: 0.75rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .work-client {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+    .work-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 0.8rem;
+      flex: 1;
+    }
+    .work-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+    }
+    .work-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      margin-bottom: 1.2rem;
+    }
+    .work-metric {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding: 0.9rem;
+      background: rgba(0,200,255,0.04);
+      border: 1px solid rgba(0,200,255,0.1);
+      border-radius: 6px;
+    }
+    .wm-num {
+      font-family: 'Orbitron', monospace;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--blue);
+      line-height: 1;
+    }
+    .wm-unit { font-size: 0.78rem; }
+    .wm-label { font-size: 0.68rem; color: var(--muted); margin-top: 0.1rem; }
+
+    .work-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: auto;
+    }
+    .work-tag {
+      padding: 0.15rem 0.55rem;
+      background: rgba(0,200,255,0.06);
+      border: 1px solid rgba(0,200,255,0.13);
+      border-radius: 3px;
+      font-size: 0.68rem;
+      color: rgba(0,200,255,0.7);
+    }
+
+    /* ── STATS BAR ── */
+    #stats-bar {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      padding: 3rem 0;
+    }
+    .stats-row .stat {
+      text-align: center;
+      padding: 0 2rem;
+      border-right: 1px solid var(--border);
+    }
+    .stats-row .stat:last-child { border-right: none; }
+    .stat-big {
+      font-family: 'Orbitron', monospace;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--blue);
+      text-shadow: var(--glow);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    /* ── CTA ── */
+    #cta {
+      background: var(--bg2);
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(0,102,221,0.15) 0%, transparent 65%);
+    }
+    .cta-inner {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 1.2rem;
+    }
+    .cta-title .accent { color: var(--blue); }
+    .cta-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      background: linear-gradient(135deg, var(--blue), var(--blue2));
+      color: var(--bg);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: 4px;
+      transition: all 0.3s;
+      box-shadow: 0 0 20px rgba(0,200,255,0.25);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--glow);
+    }
+    .btn-outline {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      border: 1px solid var(--blue);
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    .btn-outline:hover {
+      background: rgba(0,200,255,0.1);
+      box-shadow: var(--glow-sm);
+      transform: translateY(-2px);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #020710;
+      border-top: 1px solid var(--border);
+      padding: 4rem 0 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .footer-logo {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--blue);
+      margin-bottom: 1rem;
+      letter-spacing: 0.08em;
+    }
+    .footer-brand p { color: var(--muted); font-size: 0.83rem; line-height: 1.8; }
+    .footer-col h5 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.6rem; }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--blue); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-bottom p { color: var(--muted); font-size: 0.78rem; }
+    .footer-bottom a { color: var(--muted); font-size: 0.75rem; text-decoration: none; }
+    .footer-bottom a:hover { color: var(--blue); }
+
+    /* ── REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1000px) {
+      .works-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .stats-row .stat:nth-child(2) { border-right: none; }
+      .stats-row .stat { border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; }
+      .stats-row .stat:nth-child(3), .stats-row .stat:nth-child(4) { border-bottom: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 68px; left: 0; right: 0; bottom: 0;
+        background: rgba(3,8,18,0.98);
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+      .nav-links.open a { font-size: 1.2rem; }
+      .works-grid { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════ NAV ════ -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">MOW<span>EN</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="services.html">サービス</a></li>
+    <li><a href="works.html" class="active">実績</a></li>
+    <li><a href="about.html">会社概要</a></li>
+    <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ════ PAGE HEADER ════ -->
+<div class="page-header">
+  <p class="page-label">// Works</p>
+  <h1 class="page-title">支援<span class="accent">実績</span></h1>
+  <p class="page-desc">中小企業・ローカルビジネスの成長を、具体的な数字で。</p>
+</div>
+
+<!-- ════ STATS BAR ════ -->
+<div id="stats-bar">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-big" data-count="150" data-suffix="+">0</span>
+        <div class="stat-label">累計支援社数</div>
+      </div>
+      <div class="stat">
+        <span class="stat-big" data-count="98" data-suffix="%">0</span>
+        <div class="stat-label">クライアント満足度</div>
+      </div>
+      <div class="stat">
+        <span class="stat-big" data-count="3" data-suffix="x">0</span>
+        <div class="stat-label">平均ROI倍率</div>
+      </div>
+      <div class="stat">
+        <span class="stat-big" data-count="5" data-suffix="年">0</span>
+        <div class="stat-label">業界支援実績</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ WORKS LIST ════ -->
+<section id="works-list">
+  <div class="container">
+
+    <!-- Filter -->
+    <div class="filter-wrap">
+      <button class="filter-btn active" data-filter="all">すべて</button>
+      <button class="filter-btn" data-filter="web">Web制作・開発</button>
+      <button class="filter-btn" data-filter="ai">AI × 業務効率化</button>
+      <button class="filter-btn" data-filter="recruit">採用強化</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="works-grid" id="worksGrid">
+
+      <!-- Case 1 -->
+      <div class="work-card reveal" data-category="recruit">
+        <div class="work-top">
+          <span class="work-category">採用強化</span>
+          <span class="work-year">2024</span>
+        </div>
+        <div class="work-client">飲食チェーン / 居酒屋業態・都内12店舗</div>
+        <h3 class="work-title">採用サイト構築 ×<br>SNSマーケティング</h3>
+        <p class="work-desc">求人票だけに頼らず、独自採用サイトとSNS発信で候補者との接点を多面的に設計。応募〜面談〜内定のファネルを最適化し、採用ミスマッチを大幅に低減しました。</p>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <span class="wm-num">3<span class="wm-unit">倍</span></span>
+            <span class="wm-label">月間応募数</span>
+          </div>
+          <div class="work-metric">
+            <span class="wm-num">40<span class="wm-unit">%</span></span>
+            <span class="wm-label">採用コスト削減</span>
+          </div>
+        </div>
+        <div class="work-tags">
+          <span class="work-tag">採用サイト制作</span>
+          <span class="work-tag">SNSマーケ</span>
+          <span class="work-tag">ファネル設計</span>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="work-card reveal" data-category="ai">
+        <div class="work-top">
+          <span class="work-category">AI × 業務効率化</span>
+          <span class="work-year">2024</span>
+        </div>
+        <div class="work-client">中堅製造業 / 従業員80名・埼玉</div>
+        <h3 class="work-title">生成AI導入 ×<br>業務フロー自動化</h3>
+        <p class="work-desc">見積書・仕様書の作成、メール対応、在庫管理レポートの生成をAIで自動化。社内研修と定着支援もセットで提供し、現場レベルでの活用定着を実現しました。</p>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <span class="wm-num">40<span class="wm-unit">h</span></span>
+            <span class="wm-label">月間工数削減/人</span>
+          </div>
+          <div class="work-metric">
+            <span class="wm-num">2.8<span class="wm-unit">倍</span></span>
+            <span class="wm-label">処理スピード向上</span>
+          </div>
+        </div>
+        <div class="work-tags">
+          <span class="work-tag">ChatGPT活用</span>
+          <span class="work-tag">業務自動化</span>
+          <span class="work-tag">社内研修</span>
+        </div>
+      </div>
+
+      <!-- Case 3 -->
+      <div class="work-card reveal" data-category="web">
+        <div class="work-top">
+          <span class="work-category">Web制作・開発</span>
+          <span class="work-year">2024</span>
+        </div>
+        <div class="work-client">美容サロン / 都内3店舗展開</div>
+        <h3 class="work-title">コーポレートサイト<br>フルリニューアル</h3>
+        <p class="work-desc">旧来のデザインから脱却し、ブランドイメージと集客を両立するサイトへ全面リニューアル。SEO基盤を整えつつ、予約導線を最短化することでCVRを大幅に改善しました。</p>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <span class="wm-num">3.6<span class="wm-unit">倍</span></span>
+            <span class="wm-label">月間問い合わせ</span>
+          </div>
+          <div class="work-metric">
+            <span class="wm-num">2<span class="wm-unit">週</span></span>
+            <span class="wm-label">最短公開期間</span>
+          </div>
+        </div>
+        <div class="work-tags">
+          <span class="work-tag">Webデザイン</span>
+          <span class="work-tag">SEO</span>
+          <span class="work-tag">CVR改善</span>
+        </div>
+      </div>
+
+      <!-- Case 4 -->
+      <div class="work-card reveal" data-category="recruit">
+        <div class="work-top">
+          <span class="work-category">採用強化</span>
+          <span class="work-year">2025</span>
+        </div>
+        <div class="work-client">美容サロン / 都内3店舗</div>
+        <h3 class="work-title">採用特化LP ×<br>Web広告運用</h3>
+        <p class="work-desc">「会社のリアル」を伝えるストーリー型採用LPを制作し、Meta広告・Google広告との連携で精度高く候補者にリーチ。面談前に企業理解が深まる設計で入社後のミスマッチを解消。</p>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <span class="wm-num">60<span class="wm-unit">%</span></span>
+            <span class="wm-label">面談率改善</span>
+          </div>
+          <div class="work-metric">
+            <span class="wm-num">0<span class="wm-unit">件</span></span>
+            <span class="wm-label">半年間早期離職</span>
+          </div>
+        </div>
+        <div class="work-tags">
+          <span class="work-tag">採用LP</span>
+          <span class="work-tag">Meta広告</span>
+          <span class="work-tag">ミスマッチ解消</span>
+        </div>
+      </div>
+
+      <!-- Case 5 -->
+      <div class="work-card reveal" data-category="web">
+        <div class="work-top">
+          <span class="work-category">Web制作・開発</span>
+          <span class="work-year">2025</span>
+        </div>
+        <div class="work-client">社会保険労務士事務所 / 神奈川</div>
+        <h3 class="work-title">LP制作 ×<br>SEO集客戦略</h3>
+        <p class="work-desc">ターゲットキーワードを精密に選定し、検索意図に沿ったコンテンツ設計でオーガニック流入を拡大。地域×業種の掛け合わせキーワードで、確度の高い見込み客を継続的に獲得しています。</p>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <span class="wm-num">4<span class="wm-unit">倍</span></span>
+            <span class="wm-label">月間オーガニック流入</span>
+          </div>
+          <div class="work-metric">
+            <span class="wm-num">20<span class="wm-unit">件</span></span>
+            <span class="wm-label">新規相談/月（→ 達成）</span>
+          </div>
+        </div>
+        <div class="work-tags">
+          <span class="work-tag">LP制作</span>
+          <span class="work-tag">SEO</span>
+          <span class="work-tag">コンテンツ設計</span>
+        </div>
+      </div>
+
+      <!-- Case 6 -->
+      <div class="work-card reveal" data-category="ai">
+        <div class="work-top">
+          <span class="work-category">AI × 業務効率化</span>
+          <span class="work-year">2025</span>
+        </div>
+        <div class="work-client">小売EC / アパレル系・全国展開</div>
+        <h3 class="work-title">バックオフィスDX ×<br>受注・在庫自動化</h3>
+        <p class="work-desc">受注データ処理・在庫確認・出荷指示を手作業で行っていたフローをAIとRPAで自動化。繁忙期の残業を大幅削減しつつ、人為的ミスをほぼゼロに抑えることに成功しました。</p>
+        <div class="work-metrics">
+          <div class="work-metric">
+            <span class="wm-num">70<span class="wm-unit">%</span></span>
+            <span class="wm-label">処理時間削減</span>
+          </div>
+          <div class="work-metric">
+            <span class="wm-num">15<span class="wm-unit">h</span></span>
+            <span class="wm-label">残業削減/月</span>
+          </div>
+        </div>
+        <div class="work-tags">
+          <span class="work-tag">RPA</span>
+          <span class="work-tag">在庫自動化</span>
+          <span class="work-tag">バックオフィスDX</span>
+        </div>
+      </div>
+
+    </div><!-- /works-grid -->
+  </div>
+</section>
+
+<!-- ════ CTA ════ -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <p class="sec-label" style="text-align:center;">// Get Started</p>
+      <h2 class="cta-title">
+        次の<span class="accent">成功事例</span>は<br>あなたのビジネスで。
+      </h2>
+      <p class="cta-desc">
+        現在の課題や目標をお気軽にお聞かせください。<br>
+        最適なご支援プランを無料でご提案いたします。
+      </p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-primary">無料相談を予約する</a>
+        <a href="services.html" class="btn-outline">サービス一覧を見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">MOWEN, Inc</div>
+        <p>株式会社メーヴェ<br>中小企業・ローカルビジネス専門の<br>Webコンサルティングカンパニー。<br>AIと共に、あなたのビジネスの未来を創ります。</p>
+      </div>
+      <div class="footer-col">
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="services.html#web">AI活用 Web制作・開発</a></li>
+          <li><a href="services.html#ai">生成AI×業務効率化</a></li>
+          <li><a href="services.html#recruit">採用強化Web</a></li>
+          <li><a href="services.html#backoffice">バックオフィスDX</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>会社情報</h5>
+        <ul>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="about.html#mission">ミッション</a></li>
+          <li><a href="about.html#values">バリュー</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>お問い合わせ</h5>
+        <ul>
+          <li><a href="contact.html">無料相談を予約</a></li>
+          <li><a href="contact.html#faq">よくある質問</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 MOWEN, Inc（株式会社メーヴェ）All rights reserved.</p>
+      <div style="display:flex; gap:1.5rem;">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── Nav ── */
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+/* ── Scroll Reveal ── */
+const reveals = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => revealObs.observe(el));
+
+/* ── Counter Animation ── */
+function animateCount(el) {
+  const target = parseInt(el.dataset.count, 10);
+  const suffix = el.dataset.suffix || '';
+  const decimal = el.dataset.decimal === 'true';
+  const dur = 1600;
+  const start = performance.now();
+  const step = (now) => {
+    const prog = Math.min((now - start) / dur, 1);
+    const ease = 1 - Math.pow(1 - prog, 3);
+    const val = target * ease;
+    el.textContent = (decimal ? val.toFixed(1) : Math.floor(val)) + suffix;
+    if (prog < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+const statEls = document.querySelectorAll('[data-count]');
+const countObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateCount(e.target);
+      countObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+statEls.forEach(el => countObs.observe(el));
+
+/* ── Filter ── */
+const filterBtns = document.querySelectorAll('.filter-btn');
+const workCards  = document.querySelectorAll('.work-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    workCards.forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+
+/* ── Nav Scroll ── */
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('mainNav');
+  nav.style.boxShadow = window.scrollY > 20
+    ? '0 4px 30px rgba(0,0,0,0.5)'
+    : 'none';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>会社概要 | MOWEN, Inc（株式会社メーヴェ）</title>
+  <meta name="description" content="MOWEN, Inc（株式会社メーヴェ）の会社概要。ミッション・ビジョン・バリュー、会社情報をご紹介します。中小企業専門Webコンサルティングカンパニー。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="会社概要 | MOWEN, Inc">
+  <meta property="og:type" content="website">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MOWEN, Inc",
+    "alternateName": "株式会社メーヴェ",
+    "description": "中小企業・ローカルビジネス専門のWebコンサルティング会社",
+    "url": "https://mowen.inc"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:    #030812;
+      --bg2:   #060f1e;
+      --card:  rgba(5,18,40,0.85);
+      --blue:  #00c8ff;
+      --blue2: #0066dd;
+      --purple:#7b21ff;
+      --text:  #d4eeff;
+      --muted: #627f9a;
+      --border:rgba(0,200,255,0.18);
+      --glow:  0 0 30px rgba(0,200,255,0.45);
+      --glow-sm:0 0 14px rgba(0,200,255,0.3);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.75;
+    }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--blue2); border-radius: 3px; }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      background: rgba(3,8,18,0.95);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: var(--blue);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-shadow: var(--glow-sm);
+    }
+    .nav-logo span { color: #fff; }
+    .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a.active { color: var(--blue); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0; right: 0;
+      height: 1px;
+      background: var(--blue);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta {
+      padding: 0.45rem 1.4rem !important;
+      border: 1px solid var(--blue) !important;
+      border-radius: 4px;
+      color: var(--blue) !important;
+      font-size: 0.83rem !important;
+      font-weight: 700 !important;
+    }
+    .nav-cta:hover { background: var(--blue) !important; color: var(--bg) !important; box-shadow: var(--glow-sm) !important; }
+    .nav-cta::after { display: none !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--blue); border-radius: 2px; }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 10rem 0 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 80%, rgba(123,33,255,0.1) 0%, transparent 65%);
+    }
+    .page-header::after {
+      content: 'ABOUT';
+      position: absolute;
+      bottom: -20px; left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Orbitron', monospace;
+      font-size: clamp(4rem, 14vw, 12rem);
+      font-weight: 900;
+      color: rgba(0,200,255,0.035);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .page-label {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .page-title {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    .page-title .accent { color: var(--blue); }
+    .page-desc { color: var(--muted); font-size: 1rem; max-width: 520px; margin: 0 auto; }
+
+    section { padding: 6rem 0; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
+
+    .sec-label {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .sec-title {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+    }
+    .sec-title .accent { color: var(--blue); }
+    .line-deco { width: 50px; height: 2px; background: linear-gradient(90deg, var(--blue), transparent); margin: 1.2rem 0; }
+
+    /* MISSION */
+    #mission { background: var(--bg2); position: relative; }
+    #mission::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+      opacity: 0.5;
+    }
+
+    .mission-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .mission-quote {
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.5;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .mission-quote::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--blue), var(--purple));
+      border-radius: 2px;
+    }
+    .mission-quote .accent { color: var(--blue); }
+
+    .mission-text { color: var(--muted); font-size: 0.97rem; line-height: 1.9; margin-top: 2rem; }
+
+    .mvv-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .mvv-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem 1.8rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+    }
+    .mvv-card:hover {
+      border-color: rgba(0,200,255,0.4);
+      transform: translateX(5px);
+    }
+    .mvv-card-label {
+      font-family: 'Orbitron', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+    }
+    .mvv-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .mvv-card p  { color: var(--muted); font-size: 0.85rem; line-height: 1.75; }
+
+    /* VALUES */
+    #values { position: relative; }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+      margin-top: 3rem;
+    }
+    .value-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: all 0.35s;
+      position: relative;
+      overflow: hidden;
+    }
+    .value-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .value-card:hover {
+      border-color: rgba(0,200,255,0.4);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.4), var(--glow-sm);
+    }
+    .value-card:hover::before { opacity: 1; }
+    .value-icon {
+      width: 56px; height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(0,200,255,0.25);
+      border-radius: 12px;
+      background: rgba(0,200,255,0.05);
+      margin-bottom: 1.2rem;
+    }
+    .value-icon svg {
+      width: 26px; height: 26px;
+      color: var(--blue);
+      stroke: currentColor;
+    }
+    .value-card:hover .value-icon svg {
+      filter: drop-shadow(0 0 6px var(--blue));
+    }
+    .value-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .value-card p  { color: var(--muted); font-size: 0.85rem; line-height: 1.7; }
+
+    /* COMPANY INFO */
+    #company { background: var(--bg2); position: relative; }
+    #company::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    .info-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 3rem;
+    }
+
+    .info-panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+    .info-panel-logo {
+      font-family: 'Orbitron', monospace;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--blue);
+      text-shadow: var(--glow);
+      margin-bottom: 0.5rem;
+    }
+    .info-panel-sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .info-panel-tag {
+      display: inline-block;
+      padding: 0.3rem 0.9rem;
+      background: rgba(0,200,255,0.07);
+      border: 1px solid rgba(0,200,255,0.2);
+      border-radius: 4px;
+      font-size: 0.78rem;
+      color: var(--blue);
+      margin: 0.2rem;
+    }
+
+    table.info-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table.info-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+    table.info-table tr:last-child { border-bottom: none; }
+    table.info-table th {
+      padding: 1rem 1.2rem 1rem 0;
+      text-align: left;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--muted);
+      white-space: nowrap;
+      vertical-align: top;
+      width: 140px;
+    }
+    table.info-table td {
+      padding: 1rem 0;
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* CTA */
+    #cta-bar { text-align: center; }
+    .cta-inner {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-inner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), var(--purple), transparent);
+    }
+    .cta-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; margin-bottom: 1rem; }
+    .cta-title .accent { color: var(--blue); }
+    .cta-desc { color: var(--muted); max-width: 460px; margin: 0 auto 2.5rem; font-size: 0.95rem; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.9rem 2.4rem;
+      background: linear-gradient(130deg, var(--blue2), var(--blue));
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 20px rgba(0,102,221,0.5);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,200,255,0.5); }
+    .btn-outline {
+      display: inline-block;
+      padding: 0.9rem 2.4rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
+
+    footer {
+      background: #020710;
+      border-top: 1px solid var(--border);
+      padding: 3rem 0 1.5rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
+    .footer-logo { font-family: 'Orbitron', monospace; font-weight: 900; font-size: 1.1rem; color: var(--blue); text-shadow: var(--glow-sm); margin-bottom: 0.7rem; }
+    .footer-brand p { color: var(--muted); font-size: 0.82rem; line-height: 1.8; }
+    .footer-col h5 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.5rem; }
+    .footer-col a { color: var(--muted); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--blue); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+    .footer-bottom p, .footer-bottom a { color: var(--muted); font-size: 0.78rem; text-decoration: none; }
+    .footer-bottom a:hover { color: var(--blue); }
+
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 900px) {
+      .mission-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .info-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; top: 68px; left: 0; right: 0;
+        background: rgba(3,8,18,0.98);
+        padding: 1.5rem 2rem; gap: 1.2rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">MOW<span>EN</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="services.html">サービス</a></li>
+    <li><a href="works.html">実績</a></li>
+    <li><a href="about.html" class="active">会社概要</a></li>
+    <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <p class="page-label">// About Us</p>
+  <h1 class="page-title">私たちが目指す<br><span class="accent">未来のかたち</span></h1>
+  <p class="page-desc">AIとWebの力で、すべての中小企業が大企業と同じスタートラインに立てる世界を創ります。</p>
+</div>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="container">
+    <div class="mission-layout">
+      <div class="reveal">
+        <p class="sec-label">// Mission & Vision</p>
+        <div class="mission-quote">
+          <span class="accent">AIとWebで</span>、<br>
+          中小企業の<br>
+          可能性を<span class="accent">解き放つ</span>。
+        </div>
+        <p class="mission-text">
+          日本の中小企業・ローカルビジネスは、地域の雇用と文化を支える重要な存在です。
+          しかし、大手企業と比べてデジタルリソースの格差は大きく、
+          本来の力を発揮できていない事業者が多く存在します。<br><br>
+          私たちMOWEN, Incは、Web制作・マーケティング・AI×DXを武器に、
+          そのデジタル格差を縮め、中小企業が競争優位を築けるよう伴走支援します。
+          単なる制作会社ではなく、「デジタル戦略のパートナー」として長期的な関係を大切にします。
+        </p>
+      </div>
+
+      <div class="mvv-cards reveal">
+        <div class="mvv-card">
+          <div class="mvv-card-label">// MISSION</div>
+          <h3>ミッション</h3>
+          <p>AIとWebの力で、中小企業・ローカルビジネスのデジタル変革を伴走支援し、地域経済の活性化に貢献する。</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-card-label">// VISION</div>
+          <h3>ビジョン</h3>
+          <p>すべての中小企業が、予算・規模に関わらず、最先端のWebとAI技術にアクセスできる世界を実現する。</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-card-label">// VALUE</div>
+          <h3>提供価値</h3>
+          <p>「成果にコミットする伴走支援」。制作して終わりではなく、クライアントのビジネスが成長し続けることに責任を持つ。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section id="values">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <p class="sec-label">// Our Values</p>
+      <h2 class="sec-title">私たちの<span class="accent">バリュー</span></h2>
+      <div class="line-deco" style="margin:1.2rem auto;"></div>
+      <p style="color:var(--muted); max-width:520px; margin:0 auto; font-size:0.97rem;">
+        MOWENがすべての活動において大切にしている4つの価値観です。
+      </p>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+          </svg>
+        </div>
+        <h3>成果へのコミット</h3>
+        <p>制作物の納品ではなく、クライアントのビジネス成果にコミットします。すべての施策はゴールから逆算して設計します。</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>真の伴走支援</h3>
+        <p>外部のベンダーではなく、同じ目線でビジネスを考えるパートナーとして、長期的な関係を築きます。</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <h3>先端技術の民主化</h3>
+        <p>大企業だけが使える技術ではなく、AIを含む最先端ツールを中小企業でも活用できるよう、コストと複雑さを取り除きます。</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </div>
+        <h3>透明性と誠実さ</h3>
+        <p>施策の効果を正直に報告し、うまくいかないことも隠しません。データに基づいた透明なコミュニケーションを徹底します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY INFO -->
+<section id="company">
+  <div class="container">
+    <div class="reveal">
+      <p class="sec-label">// Company Info</p>
+      <h2 class="sec-title">会社<span class="accent">概要</span></h2>
+      <div class="line-deco"></div>
+    </div>
+
+    <div class="info-layout">
+      <div class="info-panel reveal">
+        <div class="info-panel-logo">MOWEN</div>
+        <div class="info-panel-sub">株式会社メーヴェ</div>
+        <div>
+          <span class="info-panel-tag">Web制作</span>
+          <span class="info-panel-tag">Web開発</span>
+          <span class="info-panel-tag">マーケティング</span>
+          <span class="info-panel-tag">AI×DX</span>
+          <span class="info-panel-tag">中小企業支援</span>
+        </div>
+      </div>
+
+      <table class="info-table reveal">
+        <tr>
+          <th>会社名</th>
+          <td>MOWEN, Inc（株式会社メーヴェ）</td>
+        </tr>
+        <tr>
+          <th>設立</th>
+          <td>2024年</td>
+        </tr>
+        <tr>
+          <th>事業内容</th>
+          <td>Web制作・開発、デジタルマーケティング、AI×DXコンサルティング、Webコンサルティング全般</td>
+        </tr>
+        <tr>
+          <th>対象顧客</th>
+          <td>中小企業・小規模事業者・ローカルビジネス（全国対応）</td>
+        </tr>
+        <tr>
+          <th>サービス提供</th>
+          <td>全国対応（リモート対応可）</td>
+        </tr>
+        <tr>
+          <th>お問い合わせ</th>
+          <td><a href="contact.html" style="color:var(--blue); text-decoration:none;">お問い合わせフォームよりご連絡ください</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-bar">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <p class="sec-label" style="text-align:center;">// Let's Talk</p>
+      <h2 class="cta-title">一緒に<span class="accent">未来を創りましょう</span></h2>
+      <p class="cta-desc">中小企業のデジタル変革を、一緒に進めていきましょう。まずは気軽にご相談ください。</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-primary">無料相談を予約する</a>
+        <a href="services.html" class="btn-outline">サービスを見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">MOWEN, Inc</div>
+        <p>株式会社メーヴェ<br>中小企業・ローカルビジネス専門の<br>Webコンサルティングカンパニー</p>
+      </div>
+      <div class="footer-col">
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="services.html#web">Web制作・開発</a></li>
+          <li><a href="services.html#marketing">デジタルマーケティング</a></li>
+          <li><a href="services.html#ai">AI×DXコンサル</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>会社情報</h5>
+        <ul>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="#mission">ミッション</a></li>
+          <li><a href="#values">バリュー</a></li>
+          <li><a href="#company">会社情報</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>お問い合わせ</h5>
+        <ul>
+          <li><a href="contact.html">無料相談を予約</a></li>
+          <li><a href="contact.html#faq">よくある質問</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 MOWEN, Inc（株式会社メーヴェ）All rights reserved.</p>
+      <div style="display:flex; gap:1.5rem;">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
